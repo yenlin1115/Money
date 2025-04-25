@@ -1,10 +1,10 @@
-# AI MCP Bloomberg Dashboard
+# AI MCP Dashboard
 
 ## Overview
-This project implements an AI-powered Market Control Panel (MCP) Bloomberg dashboard that leverages artificial intelligence to provide enhanced market insights and trading analytics. The dashboard combines Bloomberg terminal data with advanced AI algorithms to deliver real-time market analysis and predictive insights.
+This project implements an AI-powered Market Control Panel (MCP) dashboard that leverages artificial intelligence to provide enhanced market insights and trading analytics. The dashboard combines market data with advanced AI algorithms to deliver real-time market analysis and predictive insights.
 
 ## Features
-- Real-time market data integration with Bloomberg Terminal
+- Real-time market data integration (Bloomberg Terminal integration planned for future release)
 - AI-powered market trend analysis and predictions
 - Interactive data visualization and charting
 - Custom alert system for market movements
@@ -14,7 +14,6 @@ This project implements an AI-powered Market Control Panel (MCP) Bloomberg dashb
 
 ## Technology Stack
 - Python 3.x
-- Bloomberg API (blpapi)
 - Machine Learning Libraries:
   - TensorFlow/PyTorch
   - scikit-learn
@@ -45,13 +44,6 @@ source .venv/bin/activate  # On Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-4. Configure Bloomberg API credentials in `.env` file:
-```
-BLOOMBERG_API_HOST=your_host
-BLOOMBERG_API_PORT=your_port
-BLOOMBERG_API_KEY=your_key
-```
-
 ## Usage
 1. Start the dashboard server:
 ```bash
@@ -63,13 +55,19 @@ python manage.py runserver
 ## Project Structure
 ```
 Money/
-├── api/              # API endpoints and Bloomberg data integration
+├── api/              # API endpoints and data integration
 ├── dashboard/        # Dashboard UI components
 ├── ml_models/        # Machine learning models and algorithms
 ├── utils/           # Utility functions and helpers
 ├── tests/           # Test suite
 └── config/          # Configuration files
 ```
+
+## Roadmap
+- [ ] Bloomberg Terminal integration
+- [ ] Enhanced market data sources
+- [ ] Advanced trading algorithms
+- [ ] Mobile application support
 
 ## Contributing
 Contributions are welcome! Please feel free to submit a Pull Request.
@@ -83,5 +81,4 @@ For any questions or suggestions, please contact:
 - GitHub: [@yenlin1115](https://github.com/yenlin1115)
 
 ## Acknowledgments
-- Bloomberg L.P. for providing the Bloomberg API
 - Contributors and maintainers of the open-source libraries used in this project 
