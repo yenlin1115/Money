@@ -1,86 +1,91 @@
-# AI MCP 儀表板
+# AI 市場控制面板
 
-## 概覽
-本專案實作了一個由 AI 驅動的市場控制面板 (Market Control Panel, MCP) 儀表板，利用人工智慧提供增強的市場洞察和交易分析。此儀表板結合市場數據與先進的 AI 演算法，以提供即時的市場分析和預測性見解。
+## 概述
+本專案實現了一個基於人工智慧的市場控制面板（MCP），利用 AI 技術提供增強型市場洞察和交易分析。該面板結合市場數據與先進的 AI 算法，提供即時市場分析和預測洞察。
 
-## 功能特色
-- 即時市場數據整合 (未來版本計劃整合彭博終端)
-- AI 驅動的市場趨勢分析與預測
-- 互動式數據視覺化與圖表
-- 針對市場變動的自訂警報系統
-- 投資組合優化建議
-- 風險評估指標
+## 功能特點
+- 即時市場數據整合
+- AI 驅動的市場趨勢分析和預測
+- 互動式數據視覺化和圖表
+- 使用機器學習的股價預測
+- 投資組合追蹤和分析
 - 歷史數據分析
+- 交易代理整合
 
-## 技術棧
+## 技術堆疊
 - Python 3.x
+- Django 網頁框架
 - 機器學習函式庫：
-  - TensorFlow/PyTorch
   - scikit-learn
   - pandas
-- 資料視覺化：
+  - numpy
+- 數據視覺化：
   - Plotly
-  - Dash
-- 網站框架：
-  - FastAPI
-  - Django
+  - Matplotlib
+- OpenAI API 整合
 
-## 安裝說明
+## 安裝步驟
 
-1.  複製儲存庫：
-    ```bash
-    git clone https://github.com/yenlin1115/Money.git
-    cd Money
-    ```
+1. 複製專案：
+```bash
+git clone https://github.com/yenlin1115/Money.git
+cd Money
+```
 
-2.  建立並啟用虛擬環境 (使用 uv)：
-    ```bash
-    # 安裝 uv (如果尚未安裝): https://github.com/astral-sh/uv
-    uv init
-    source .venv/bin/activate  # Windows: .venv\Scripts\activate
-    ```
+2. 建立並啟動虛擬環境：
+```bash
+python -m venv .venv
+source .venv/bin/activate  # Windows 系統：.venv\Scripts\activate
+```
 
-3.  安裝依賴套件 (使用 uv)：
-    ```bash
-    uv add -r requirements.txt
-    ```
+3. 安裝依賴套件：
+```bash
+pip install -r requirements.txt
+```
+
+4. 設定環境變數：
+```bash
+cp .env.example .env
+# 編輯 .env 檔案設定您的配置
+```
 
 ## 使用方式
-1.  啟動儀表板伺服器：
-    ```bash
-    uv run python manage.py runserver
-    ```
+1. 啟動面板伺服器：
+```bash
+python manage.py runserver
+```
 
-2.  在瀏覽器中開啟 `http://localhost:8000` 來訪問儀表板
+2. 在瀏覽器中訪問 `http://localhost:8000`
 
-## 專案結構 (根據 README.md)
+## 專案結構
 ```
 Money/
-├── api/              # API 端點與資料整合
-├── dashboard/        # 儀表板 UI 元件
-├── ml_models/        # 機器學習模型與演算法
-├── utils/            # 公用函式與輔助工具
-├── tests/            # 測試套件
-└── config/           # 設定檔
+├── Moneytest/        # Django 專案配置
+├── companies/        # 股票和公司數據模型與視圖
+├── templates/        # HTML 模板
+├── data/            # 數據儲存
+├── plots/           # 生成的圖表
+├── trading_agents/  # 交易代理實現
+└── utils/           # 工具函數
 ```
-**注意:** 實際目錄結構可能與 README.md 中描述略有不同。
 
-## 發展藍圖
-- [ ] 整合彭博終端 (Bloomberg Terminal)
-- [ ] 增加更多市場數據來源
-- [ ] 開發更進階的交易演算法
-- [ ] 支援行動應用程式
+## 開發路線圖
+- [ ] 增強市場數據來源
+- [ ] 進階交易算法
+- [ ] 行動應用程式支援
+- [ ] 即時數據串流
+- [ ] 投資組合優化
 
 ## 貢獻
-歡迎各種貢獻！請隨時提交 Pull Request。
+歡迎貢獻！請隨時提交 Pull Request。
 
 ## 授權
-本專案採用 MIT 授權 - 詳情請參閱 LICENSE 檔案。
+本專案採用 MIT 授權條款 - 詳見 LICENSE 檔案。
 
 ## 聯絡方式
-若有任何問題或建議，請聯絡：
-- Email: yenlin@uwm.edu
-- GitHub: [@yenlin1115](https://github.com/yenlin1115)
+如有任何問題或建議，請聯絡：
+- 電子郵件：yenlin1115@gmail.com
+- GitHub：[@yenlin1115](https://github.com/yenlin1115)
 
 ## 致謝
-- 感謝本專案所使用的開源函式庫的貢獻者與維護者
+- 本專案使用的開源函式庫的貢獻者和維護者
