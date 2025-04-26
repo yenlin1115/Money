@@ -42,4 +42,19 @@ ENV/
 
 # OS
 .DS_Store
-Thumbs.db 
+Thumbs.db  
+
+# Start.sh
+start.sh
+
+# JetBrains
+.idea/
+
+# cursor rules
+*.mdc
+
+# Database
+db.sqlite3
+
+# env
+.env

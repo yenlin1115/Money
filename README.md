@@ -1,3 +1,4 @@
+[繁體中文](README-zh-tw.md)
 # AI MCP Dashboard
 
 ## Overview
