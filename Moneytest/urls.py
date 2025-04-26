@@ -22,4 +22,5 @@ urlpatterns = [
     path('', views.home, name='home'),
     path('admin/', admin.site.urls),
     path('api/', include('api.urls')),
+    path('stocks/', include('companies.urls')),
 ]

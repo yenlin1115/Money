@@ -79,7 +79,7 @@ Money/
 
 ## 聯絡方式
 若有任何問題或建議，請聯絡：
-- Email: yenlin1115@gmail.com
+- Email: yenlin@uwm.edu
 - GitHub: [@yenlin1115](https://github.com/yenlin1115)
 
 ## 致謝
