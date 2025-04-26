@@ -47,9 +47,6 @@ Thumbs.db
 # Start.sh
 start.sh
 
-# JetBrains
-.idea/
-
 # cursor rules
 *.mdc
 
