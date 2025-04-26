@@ -1,85 +1,88 @@
-[繁體中文](README-zh-tw.md)
-# AI MCP Dashboard
+# AI 股票预测平台
 
-## Overview
-This project implements an AI-powered Market Control Panel (MCP) dashboard that leverages artificial intelligence to provide enhanced market insights and trading analytics. The dashboard combines market data with advanced AI algorithms to deliver real-time market analysis and predictive insights.
+这是一个基于 Django 的 AI 股票预测平台，集成了多个 LLM 智能体进行股票分析和预测。
 
-## Features
-- Real-time market data integration (Bloomberg Terminal integration planned for future release)
-- AI-powered market trend analysis and predictions
-- Interactive data visualization and charting
-- Custom alert system for market movements
-- Portfolio optimization recommendations
-- Risk assessment metrics
-- Historical data analysis
+## 功能特点
 
-## Technology Stack
-- Python 3.x
-- Machine Learning Libraries:
-  - TensorFlow/PyTorch
-  - scikit-learn
-  - pandas
-- Data Visualization:
-  - Plotly
-  - Dash
-- Web Framework:
-  - FastAPI
-  - Django
+- **股票数据可视化**：展示股票价格历史、交易量和波动率
+- **多智能体分析**：
+  - 技术分析智能体：分析价格趋势和技术指标
+  - 基本面分析智能体：分析公司财务数据
+  - 情绪分析智能体：分析市场情绪
+  - 新闻分析智能体：分析相关新闻
+- **交易决策系统**：综合各智能体分析结果，提供交易建议
 
-## Installation
+## 技术栈
 
-1. Clone the repository:
+- Django 5.2
+- Python 3.11
+- Pandas
+- Chart.js
+- Bootstrap 5
+
+## 项目结构
+
+```
+Money/
+├── companies/          # 主要应用
+│   ├── models.py      # 数据模型
+│   ├── views.py       # 视图函数
+│   ├── urls.py        # URL 路由
+│   └── templates/     # 模板文件
+├── trading_agents.py  # 交易智能体
+├── main.py           # 数据获取脚本
+└── Moneytest/        # 项目配置
+```
+
+## 安装步骤
+
+1. 克隆仓库：
 ```bash
-git clone https://github.com/yenlin1115/Money.git
+git clone https://github.com/yourusername/Money.git
 cd Money
 ```
 
-2. Create and activate virtual environment:
+2. 创建虚拟环境：
 ```bash
 python -m venv .venv
-source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+source .venv/bin/activate  # Linux/Mac
+# 或
+.venv\Scripts\activate  # Windows
 ```
 
-3. Install dependencies:
+3. 安装依赖：
 ```bash
 pip install -r requirements.txt
 ```
 
-## Usage
-1. Start the dashboard server:
+4. 运行数据库迁移：
+```bash
+python manage.py migrate
+```
+
+5. 启动开发服务器：
 ```bash
 python manage.py runserver
 ```
 
-2. Access the dashboard at `http://localhost:8000`
+## 使用说明
 
-## Project Structure
-```
-Money/
-├── api/              # API endpoints and data integration
-├── dashboard/        # Dashboard UI components
-├── ml_models/        # Machine learning models and algorithms
-├── utils/           # Utility functions and helpers
-├── tests/           # Test suite
-└── config/          # Configuration files
-```
+1. 访问主页：http://localhost:8000/
+2. 查看股票仪表盘：http://localhost:8000/stocks/dashboard/
+3. 查看交易预测：http://localhost:8000/stocks/predictions/
 
-## Roadmap
-- [ ] Bloomberg Terminal integration
-- [ ] Enhanced market data sources
-- [ ] Advanced trading algorithms
-- [ ] Mobile application support
+## 待完成功能
 
-## Contributing
-Contributions are welcome! Please feel free to submit a Pull Request.
+- [ ] 集成 LLM API 密钥
+- [ ] 实现实时数据更新
+- [ ] 添加更多技术指标
+- [ ] 优化预测算法
+- [ ] 添加用户认证系统
 
-## License
-This project is licensed under the MIT License - see the LICENSE file for details.
+## 贡献指南
 
-## Contact
-For any questions or suggestions, please contact:
-- Email: yenlin1115@gmail.com
-- GitHub: [@yenlin1115](https://github.com/yenlin1115)
+欢迎提交 Issue 和 Pull Request！
 
-## Acknowledgments
-- Contributors and maintainers of the open-source libraries used in this project 
+## 许可证
+
+MIT License 
